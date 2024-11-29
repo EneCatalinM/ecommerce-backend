@@ -15,7 +15,7 @@ async function bootstrap() {
       credentials: true, 
     });
 
-  await app.listen(6060);
+  await app.listen(process.env.PORT || 6060);
 
   Logger.log('Application is running on: http://localhost:6060');
 }
