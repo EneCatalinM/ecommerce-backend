@@ -70,7 +70,6 @@ export class OrdersService {
 
 
   async getUserOrders(userId: string): Promise<Order[]> {
-    // Verifică dacă userId este un ObjectId valid
     if (!Types.ObjectId.isValid(userId)) {
       throw new BadRequestException('Invalid user ID');
     }
@@ -84,7 +83,6 @@ export class OrdersService {
   }
 
   async cancelOrder(orderId: string, userId: string): Promise<Order> {
-    // Verifică dacă ID-urile sunt valide
     if (!Types.ObjectId.isValid(orderId) || !Types.ObjectId.isValid(userId)) {
       throw new BadRequestException('Invalid order or user ID');
     }

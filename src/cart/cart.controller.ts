@@ -1,5 +1,3 @@
-// src/cart/cart.controller.ts
-
 import {
     Controller,
     Get,
@@ -16,7 +14,7 @@ import {
   import { Request } from 'express';
   
   @Controller('cart')
-  @UseGuards(JwtAuthGuard) // Protejăm toate rutele din acest controller
+  @UseGuards(JwtAuthGuard)
   export class CartController {
     constructor(private readonly cartService: CartService) {}
   

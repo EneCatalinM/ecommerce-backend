@@ -16,7 +16,7 @@ import * as ioredisStore from 'cache-manager-ioredis';
       store: ioredisStore,
       host: 'localhost',
       port: 6379,
-      ttl: 600, // Timpul de expirare pentru cache în secunde (10 minute)
+      ttl: 600,
     }),
     ConfigModule.forRoot({
       isGlobal: true,

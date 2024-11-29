@@ -8,7 +8,7 @@ import { CacheModule } from '@nestjs/cache-manager';
 @Module({
   imports: [
     MongooseModule.forFeature([{ name: Product.name, schema: ProductSchema }]),
-    CacheModule.register(), // Importă CacheModule aici pentru a rezolva dependința CACHE_MANAGER
+    CacheModule.register(),
   ],
   controllers: [ProductsController],
   providers: [ProductsService],
